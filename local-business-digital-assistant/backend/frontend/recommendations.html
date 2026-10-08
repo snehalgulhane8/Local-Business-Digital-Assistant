@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assistant | LocalBiz AI</title><link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+<header class="navbar"><div class="logo">LocalBiz AI</div><nav>
+<a href="/">Home</a><a href="/dashboard.html">Dashboard</a><a href="/customers.html">Customers</a><a href="/products.html">Products</a><a href="/recommendations.html">Assistant</a>
+</nav></header>
+<main class="container">
+<h1>💡 Business Assistant</h1>
+<p class="muted">Ask questions about the Olist business data.</p>
+<div class="assistant-box">
+<input id="question" placeholder="Example: What is my total revenue?">
+<button onclick="askQuestion()">Ask</button>
+</div>
+<div id="answer" class="answer-box"></div>
+<h2>Business Recommendations</h2>
+<div id="recommendations">Loading...</div>
+</main>
+<script src="/static/js/recommendations.js"></script>
+</body></html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orders | LocalBiz AI</title><link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+<header class="navbar"><div class="logo">LocalBiz AI</div><nav>
+<a href="/">Home</a><a href="/dashboard.html">Dashboard</a><a href="/customers.html">Customers</a><a href="/products.html">Products</a><a href="/recommendations.html">Assistant</a>
+</nav></header>
+<main class="container"><h1>Order Status</h1><div id="order-list" class="cards">Loading...</div></main>
+<script>
+async function loadOrders(){
+ const r=await fetch('/api/orders/status'); const data=await r.json();
+ document.getElementById('order-list').innerHTML=data.map(x=>`
+ <div class="stat-card"><span>${x.status}</span><strong>${Number(x.count).toLocaleString()}</strong></div>`).join('');
+}
+loadOrders();
+</script>
+</body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | LocalBiz AI</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="navbar"><div class="logo">LocalBiz AI</div><nav>
+<a href="/">Home</a><a href="/dashboard.html">Dashboard</a><a href="/customers.html">Customers</a><a href="/products.html">Products</a><a href="/recommendations.html">Assistant</a>
+</nav></header>
+
+<main class="container">
+<h1>Business Dashboard</h1>
+<div class="cards">
+  <div class="stat-card"><span>Total Revenue</span><strong id="revenue">Loading...</strong></div>
+  <div class="stat-card"><span>Total Orders</span><strong id="orders">Loading...</strong></div>
+  <div class="stat-card"><span>Customers</span><strong id="customers">Loading...</strong></div>
+  <div class="stat-card"><span>Average Order</span><strong id="average-order">Loading...</strong></div>
+</div>
+
+<div class="chart-grid">
+  <div class="chart-card"><h2>Monthly Sales</h2><canvas id="salesChart"></canvas></div>
+  <div class="chart-card"><h2>Top Categories</h2><canvas id="categoryChart"></canvas></div>
+</div>
+
+<div class="section-card">
+  <h2>Business Insights</h2>
+  <div id="insights">Loading...</div>
+</div>
+</main>
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>
